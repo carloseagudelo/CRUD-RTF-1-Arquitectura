@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numberChairP: 1
+  numberChairG: 1
+  occupiedP: 1
+  occupiedG: 1
+  seat_id: 
+
+two:
+  numberChairP: 1
+  numberChairG: 1
+  occupiedP: 1
+  occupiedG: 1
+  seat_id: 

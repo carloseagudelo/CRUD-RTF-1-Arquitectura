@@ -1,0 +1,41 @@
+<%= form_for(@boletu) do |f| %>
+  <% if @boletu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boletu.errors.count, "error") %> prohibited this boletu from being saved:</h2>
+
+      <ul>
+      <% @boletu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Pelicula_id %><br>
+    <%= f.text_field :movie_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ticket_id %><br>
+    <%= f.text_field :ticket_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Precio_a_credito %><br>
+    <%= f.number_field :pricecredit %>
+  </div>
+  <div class="field">
+    <%= f.label :Precio_a_puntos %><br>
+    <%= f.number_field :pricepoints %>
+  </div>
+  <div class="field">
+    <%= f.label :Numero_de_puntos %><br>
+    <%= f.number_field :numberpoints %>
+  </div>
+  <div class="field">
+    <%= f.label :Typo_de_boleto %><br>
+    <%= f.check_box :typeboletus %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

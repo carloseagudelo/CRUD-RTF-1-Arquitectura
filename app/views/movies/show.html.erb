@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @movie.horary %>
+</p>
+
+<p>
+  <strong>Sala:</strong>
+  <%= @movie.hall %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Duracion:</strong>
+  <%= @movie.duration %>
+</p>
+
+<p>
+  <strong>Informacion:</strong>
+  <%= @movie.information %>
+</p>
+
+<p>
+  <strong>Dimension:</strong>
+  <%= @movie.dimension %>
+</p>
+
+<p>
+  <strong>Calidad:</strong>
+  <%= @movie.quality %>
+</p>
+
+<p>
+  <strong>Sillas:</strong>
+  <%= @movie.chair %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

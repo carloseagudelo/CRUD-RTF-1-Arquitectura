@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Socio:</strong>
+  <%= @ticket.socio_id %>
+</p>
+
+<p>
+  <strong>Totalpricepoints:</strong>
+  <%= @ticket.totalpricepoints %>
+</p>
+
+<p>
+  <strong>Totalpricecredit:</strong>
+  <%= @ticket.totalpricecredit %>
+</p>
+
+<p>
+  <strong>Totalpoints:</strong>
+  <%= @ticket.totalpoints %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

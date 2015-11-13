@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  socio_id_id: 
+  totalpricepoints: 1
+  totalpricecredit: 1
+  totalpoints: 1
+
+two:
+  socio_id_id: 
+  totalpricepoints: 1
+  totalpricecredit: 1
+  totalpoints: 1

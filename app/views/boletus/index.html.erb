@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de peliculas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pelicula</th>
+      <th>Ticket</th>
+      <th>Precio a credito</th>
+      <th>Precio con puntos</th>
+      <th>Numero de puntos</th>
+      <th>tipo de boleta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boletus.each do |boletu| %>
+      <tr>
+        <td><%= boletu.movie %></td>
+        <td><%= boletu.ticket %></td>
+        <td><%= boletu.pricecredit %></td>
+        <td><%= boletu.pricepoints %></td>
+        <td><%= boletu.numberpoints %></td>
+        <td><%= boletu.typeboletus %></td>
+        <td><%= link_to 'Ver', boletu %></td>
+        <td><%= link_to 'Editar', edit_boletu_path(boletu) %></td>
+        <td><%= link_to 'Eliminar', boletu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Agregar nuevo Boleto', new_boletu_path %>

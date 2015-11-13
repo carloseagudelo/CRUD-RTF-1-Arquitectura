@@ -1,0 +1,37 @@
+<%= form_for(@chair) do |f| %>
+  <% if @chair.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chair.errors.count, "error") %> prohibited this chair from being saved:</h2>
+
+      <ul>
+      <% @chair.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numberChairP %><br>
+    <%= f.number_field :numberChairP %>
+  </div>
+  <div class="field">
+    <%= f.label :numberChairG %><br>
+    <%= f.number_field :numberChairG %>
+  </div>
+  <div class="field">
+    <%= f.label :occupiedP %><br>
+    <%= f.number_field :occupiedP %>
+  </div>
+  <div class="field">
+    <%= f.label :occupiedG %><br>
+    <%= f.number_field :occupiedG %>
+  </div>
+  <div class="field">
+    <%= f.label :seat_id %><br>
+    <%= f.text_field :seat_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

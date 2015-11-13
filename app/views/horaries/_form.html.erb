@@ -1,0 +1,21 @@
+<%= form_for(@horary) do |f| %>
+  <% if @horary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@horary.errors.count, "error") %> prohibited this horary from being saved:</h2>
+
+      <ul>
+      <% @horary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :begin %><br>
+    <%= f.date_select :begin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
